@@ -29,6 +29,7 @@ header{
 
 .header-title{
     font-size: 2rem;
+    margin-left: 1rem;
 }
 
 .header-group{
@@ -96,3 +97,135 @@ header{
     padding: 1px;
 }
 /*End of Navigation*/
+
+/* Dashboard */
+.dash-headline{
+    margin: 1rem .5rem 2rem 1rem;
+}
+
+.upper-dash{
+    display: flex;
+    flex-direction: row;
+}
+
+.dash-space{
+    width: 100%;
+    background: rgb(235,235,235);
+    border-left: 2px solid darkgray;
+    border-bottom: 2px solid darkgray;
+    margin-left: 1rem;
+}
+
+.alert{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(116,119,191);
+    border: 2px solid rgb(116,119,191);
+    color: whitesmoke;
+    height: 50px;
+    margin: 1rem 1rem 2rem 1rem;
+    border-radius: 5px;
+}
+
+.alert p {
+    padding: 0 1rem;
+}
+/*End of Dashboard*/
+
+/*Main*/
+.main{
+    grid-area: main;
+    background-color: whitesmoke;
+}
+
+.headline{
+    text-transform: uppercase;
+    margin: .5rem 0 0 1rem;
+}
+
+/* Charts Section*/
+.charts{
+    grid-column: 1 / span 2;
+}
+
+.traffic-nav{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0 auto;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10rem;
+    font-size: 1rem;
+}
+
+.active {
+    background-color: rgb(129,201,143);
+    border-radius: 25px;
+    padding: 5px 10px;
+    color: whitesmoke;
+}
+
+.widget-container-full,
+.widget-container-half{
+    width: 95vw;
+}
+
+#daily-chart,
+#mobile-chart{
+    width: 45vw;
+    height: 45vh;
+}
+/* End of Chart Section*/
+
+/*Social Statistics*/
+
+.social-container{
+    margin: 1rem 1rem;
+}
+.brand-container{
+    display: flex;
+    border: 2px solid rgb(145,145,145);
+    background: rgb(235,235,235);
+    margin: 5px 5px;
+    padding: 10px 10px;
+}
+
+.social-images{
+    display: inline-flex;
+    flex-direction: row;
+    background-color: rgb(116,119,191);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: auto 1rem;
+}
+
+.social-images svg{
+    width: 100px;
+    height: 100px;
+    padding: 25%;
+}
+
+.social-images path{
+    fill: #fff;
+}
+
+.social-text {
+    margin: 1rem 1rem;
+}
+
+.brand {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    color: rgb(116,119,191);
+}
+
+.number {
+    font-size: 3rem;
+    margin: .1rem auto 1rem;
+}
+/*End of Social Statistics*/
+
+/*End of Main*/
