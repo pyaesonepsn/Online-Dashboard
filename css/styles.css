@@ -10,6 +10,7 @@
     grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
     grid-auto-rows: auto;
     grid-template-areas: "header" "navigation" "main";
+    width: 100%;
 }
 
 /* Header */
@@ -140,7 +141,7 @@ header{
 
 .headline{
     text-transform: uppercase;
-    margin: .5rem 0 0 1rem;
+    margin: 1rem 0.5rem 0.5rem 1.5rem;
 }
 
 /* Charts Section*/
@@ -190,6 +191,7 @@ header{
     background: rgb(235,235,235);
     margin: 5px 5px;
     padding: 10px 10px;
+    border-radius: 5px;
 }
 
 .social-images{
@@ -217,15 +219,346 @@ header{
 }
 
 .brand {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 0;
     color: rgb(116,119,191);
 }
 
 .number {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: .1rem auto 1rem;
+    padding: .5rem;
 }
 /*End of Social Statistics*/
 
+/*New Members and Recent Activity*/
+.new-members,
+.recent-container{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.member{
+    text-align: center;
+    border-bottom: 2px solid rgb(145,145,145);
+    padding: 1rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.member:last-of-type{
+    border: none;
+}
+
+.member-text p{
+    margin-bottom: 1rem;
+}
+.member-text a{
+    text-decoration: none;
+    color: dodgerblue;
+}
+/*End of New Members and Recent Activity*/
+
+/*Message Settings*/
+.message-setting{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form,
+.settings{
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+    margin: 0 auto;
+}
+
+#label{
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.contact-form-input{
+    margin-bottom: .6rem;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    height: 3rem;
+    padding: 1rem;
+}
+
+.contact-form-textarea{
+    min-height: 100px;
+}
+
+.form-submit-btn{
+    background-color: rgb(116, 119, 191);
+    height: 3rem;
+    margin-top: .5rem;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.settings-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#timezone{
+    margin-bottom: .6rem;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    height: 3rem;
+    padding: .5rem;
+    color: darkgray;
+}
+
+.save {
+    background-color: rgb(116, 119, 191);
+    width: 50%;
+    height: 3rem;
+    padding: .5rem;
+    margin: .5rem .5rem 1rem 0;
+    border-radius: 5px;
+}
+
+.cancel {
+    background: rgb(153, 153, 153);
+    width: 50%;
+    height: 3rem;
+    padding: .5rem;
+    margin: .5rem 0 1rem .5rem;
+    border-radius: 5px;
+}
+/*End of Message Settings*/
 /*End of Main*/
+
+/*Media Query*/
+@media (min-width: 768px){
+    .grid-container{
+        grid-template-columns: 55px 1fr;
+        grid-template-areas: "header header" "navigation main";
+    }
+
+    .profile-picture{
+        margin: 4%;
+    }
+
+    .header-name{
+        margin-left: 5px;
+        font-size: .8rem;
+        min-width: 85px;
+    }
+
+/*    Main Nav Bar*/
+    .navigation{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: flex-start;
+    }
+
+    .icon-home,
+    .icon-chart,
+    .icon-members,
+    .icon-settings{
+        margin-top: 30px;
+        padding: 3px;
+    }
+/*    End of Main Nav Bar*/
+
+/*    Dashboard Charts*/
+    .charts{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .traffic-chart-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .traffic-chart-header .headline{
+        flex-basis: 50%;
+    }
+
+    .traffic-nav li {
+        margin: 10px;
+    }
+
+    .daily-traffic{
+        grid-column: 1/2;
+        border-right: 2px solid gray;
+    }
+
+    .mobile-users{
+        grid-column: 2/3;
+    }
+
+    .daily-traffic .headline,
+    .mobile-users .headline{
+        padding-left: 5px;
+    }
+
+    .widget-container-full{
+        width: 90vw;
+    }
+
+    .widget-container-half{
+        width: 45vw;
+    }
+
+/*    End of Dashboard Charts*/
+
+/*    Social Statistics */
+    .social-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin: 2px 4px;
+    }
+
+    .social-images,
+    .social-images svg{
+        height: 90px;
+        width: 90px;
+    }
+
+    .brand-container{
+        margin: 5px 5px;
+        padding: 5px;
+    }
+
+    .brand{
+        font-size: 1rem;
+    }
+
+    .number{
+        font-size: 2rem;
+    }
+
+/*    End of Social Statistics*/
+
+/*    Members & Recent Activity*/
+    .new-members,
+    .message-setting{
+        grid-column: 1 / span 2;
+    }
+
+    .members-container,
+    .recent-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .member {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .member .profile-picture{
+        margin: 2px 5px 5px 0;
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .member-date{
+        align-content: center;
+        margin-right: 5%;
+        width: 50px;
+    }
+
+    .member-text {
+        display: inline-flex;
+        flex-direction: column;
+        flex-basis: 80%;
+        text-align: start;
+    }
+
+    .hidden{
+        visibility: visible;
+        margin-right: 5px;
+        color: rgb(55,55,218);
+    }
+/*    End of Members & Recent Activity*/
+}
+
+@media (min-width: 1024px){
+    .header-name{
+        margin-left: 5px;
+        font-size: 1rem;
+        min-width: 120px;
+    }
+
+/*    Charts */
+    .traffic-chart-header{
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .traffic-chart-header .headline{
+        flex-basis: 60%;
+    }
+
+/*    End of Charts*/
+
+/*    Member & Recent Activity*/
+
+   .profile-picture{
+       width: 4rem;
+       height: 4rem;
+   }
+
+   .members-container,
+   .recent-container{
+       display: flex;
+       flex-basis: 50%;
+   }
+
+   .members-container{
+       border-right: 2px solid rgb(145,145,145);
+   }
+
+   .member-text p{
+       width: 95%;
+   }
+/*    End of Member & Recent Activity*/
+
+/*    Settings*/
+    .message-setting{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .message,
+    .settings{
+        flex-basis: 50%;
+    }
+
+    .message{
+        border-right: 2px solid rgb(145,145,145);
+    }
+
+    .settings{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .settings .headline {
+        margin-left: 10px;
+    }
+
+    #timezone{
+        margin: 0 5px;
+    }
+
+    .btn save,
+    .btn cancel{
+        margin: 2% 4%;
+    }
+/*    End of Settings*/
+}
+/*End of Media Query*/
